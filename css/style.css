@@ -1,0 +1,133 @@
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+}
+
+body {
+  font-family: Roboto;
+  position: relative;
+  min-height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.latest_release img {
+  width: 100vw;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+a .cart {
+  width: 30px;
+}
+
+.topnav {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: #c80000;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #000000;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+footer {
+  background: #c80000;
+  height: auto;
+  width: 100vw;
+  padding-top: 40px;
+  color: #ffffff;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  text-align: center;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+  margin-right: 20px;
+}
+.socials a {
+  margin: 0 16px;
+  text-decoration: none;
+}
+
+.audience-message {
+  text-align: center;
+  padding: 20px 80px;
+}
+
+.media-container {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #000000;
+}
+
+.artist-image {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  margin-top: 40px;
+}
+
+.artist {
+  width: 350px;
+}
+
+.artist-name {
+  margin-top: 40px;
+  margin-bottom: 55px;
+  border: 5px solid #c80000;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 80px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: #ffffff;
+}
