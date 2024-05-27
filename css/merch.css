@@ -1,0 +1,26 @@
+.merch-card .name {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.merch-card .image-container {
+    display: block;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.merch-card .image-container img {
+    display: inline-block;
+    height: 100%;
+    max-width: 100%;
+}
+
+.merch-card .description {
+    width: 100%;
+    display: block;
+    text-align: center;
+}

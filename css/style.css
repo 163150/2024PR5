@@ -1,133 +1,118 @@
 @font-face {
-  font-family: Roboto;
-  src: url("../fonts/Roboto-Regular.ttf");
-  font-weight: 400;
+    font-family: Roboto;
+    src: url("../fonts/roboto-regular.ttf");
+    font-weight: 400;
+}
+
+.bg-black {
+    background-color: #000000;
+}
+
+.text-black {
+    color: #000000;
+}
+
+.image-fit-x {
+    width: 100%;
+}
+
+.bordered-content {
+    border: #B82519 solid 5px;
+    padding: 20px;
 }
 
 body {
-  font-family: Roboto;
-  position: relative;
-  min-height: 100vh;
+    font-family: Roboto;
+    position: relative;
+    min-height: 100vh;
+    background-color: #252525;
+    color: #ffffff;
+    padding-bottom: 120px;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
+header {
+    background-color: #ffffff;
 }
 
-.latest_release img {
-  width: 100vw;
+.page-header {
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: bold;
 }
 
-.logo {
-  height: 60px;
-  width: auto;
-  padding-left: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+.navbar-brand img {
+    height: 60px;
+    width: auto;
 }
 
-a .cart {
-  width: 30px;
+.navbar-nav li {
+    margin-right: 8px;
 }
 
-.topnav {
-  display: flex;
-  flex-direction: row;
-  background-color: #ffffff;
-  overflow: hidden;
+.navbar-nav a {
+    color: #B82519;
+    text-transform: uppercase;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  color: #000000;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+.navbar-nav .cart {
+    height: 40px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: #c80000;
+.latest_releases img {
+    width: 100%;
 }
 
-/* Add an active class to highlight the current page */
-.topnav a.active {
-  background-color: #000000;
-  color: white;
+.featured-artist {
+    width: 380px;
+    margin: 0 50px;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
+.featured-artist .image-container {
+    display: block;
+    height: 350px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.featured-artist img {
+    height: 100%;
+    margin-left: -25%;
+}
+
+.featured-artist .name {
+    margin-top: 30px;
+    padding: 20px;
+    display: block;
+    text-align: center;
+    border: #B82519 solid 4px;
 }
 
 footer {
-  background: #c80000;
-  height: auto;
-  width: 100vw;
-  padding-top: 40px;
-  color: #ffffff;
-}
-
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-direction: row;
-  text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background-color: #B82519;
+    text-align: right;
 }
 
 .socials {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem 0 3rem 0;
-  margin-right: 20px;
-}
-.socials a {
-  margin: 0 16px;
-  text-decoration: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.audience-message {
-  text-align: center;
-  padding: 20px 80px;
+.socials li {
+    float: left;
+    margin-right: 30px;
 }
 
-.media-container {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: #000000;
+.mission-image-container {
+    overflow: hidden;
+    height: 400px;
 }
 
-.artist-image {
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
-  margin-top: 40px;
-}
-
-.artist {
-  width: 350px;
-}
-
-.artist-name {
-  margin-top: 40px;
-  margin-bottom: 55px;
-  border: 5px solid #c80000;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  height: 80px;
-  width: 350px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  padding-left: 50px;
-  padding-right: 50px;
-  color: #ffffff;
+.mission-image-container img {
+    height: 100%;
 }

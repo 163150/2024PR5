@@ -3,10 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/glide.core.min.css">
-    <link rel="stylesheet" href="css/glide.theme.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +15,7 @@
     <title>PR5</title>
 </head>
 
-<body>
+<body class="bg-white">
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand mx-4 mt-2 mb-2" href="index.html">
@@ -56,69 +53,40 @@
         </nav>
     </header>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="my-4 mx-4">LATEST RELEASE</h1>
+    <div class="container-fluid text-black">
+        <div class="row border-top border-bottom">
+            <div class="col-12 text-center">
+                <h1 class="my-4 mx-4 page-header">Design</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-12 px-0 latest_releases">
-                <div class="glide">
-                    <div class="glide__track" data-glide-el="track">
-                        <ul class="glide__slides">
-                            <li class="glide__slide">
-                                <img src="images/latest-release1.jpeg" alt="Release 1">
-                            </li>
-                            <li class="glide__slide">
-                                <img src="images/latest-release2.jpeg" alt="Release 2">
-                            </li>
-                            <li class="glide__slide">
-                                <img src="images/latest-release3.jpeg" alt="Release 3">
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="glide__arrows" data-glide-el="controls">
-                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
-                    </div>
-                    <div class="glide__bullets" data-glide-el="controls[nav]">
-                        <button class="glide__bullet" data-glide-dir="=0"></button>
-                        <button class="glide__bullet" data-glide-dir="=1"></button>
-                        <button class="glide__bullet" data-glide-dir="=2"></button>
-                      </div>
-                </div>
+            <div class="col-12 text-center border-bottom">
+                <h2 class="my-4 mx-4">Prototype</h2>
+            </div>
+            <div class="col-12 text-center">
+                <img class="image-fit-x" src="images/paperprototype.jpg" alt="Prototype">
             </div>
         </div>
-        <div class="row justify-content-center bg-white">
-            <div class="col-md-10 col-sm-12 text-dark">
-                <p class="text-center my-4 mx-5">
-                    We are Breda Tunes, Breda's first local record label! Whether you're
-                    seeking new sounds, artist information, or simply looking to connect
-                    with fellow music enthusiasts, we hope our website provides an enjoyable
-                    and enriching experience. Stay tuned for updates, new releases, and
-                    exciting announcements.
-                </p>
+        <div class="row">
+            <div class="col-12 text-center border-bottom border-top">
+                <h2 class="my-4 mx-4">Flow diagram</h2>
+            </div>
+            <div class="col-12 text-center">
+                <img class="image-fit-x" src="images/flowchart.jpg" alt="Flow diagram">
             </div>
         </div>
-        <div class="row justify-content-center py-5 bg-black">
-            <div class="featured-artist mb-0 mb-sm-4">
-                <span class="image-container">
-                    <img src="images/jax-steel.jpeg" alt="Artist image Jax Steel">
-                </span>
-                <span class="name">JAX STEEL - PULSEWAVES</span>
+        <div class="row">
+            <div class="col-12 text-center border-bottom border-top">
+                <h2 class="my-4 mx-4">Style guide</h2>
             </div>
-            <div class="featured-artist mb-0 mb-sm-4">
-                <span class="image-container">
-                    <img src="images/the-velvet-waves.jpeg" alt="Artist image The Velvet Waves">
-                </span>
-                <span class="name">THE VELVET WAVES - ECHOES OF YESTERDAY</span>
+            <div class="col-4 text-center">
+                <img class="image-fit-x" src="images/imagesguide.jpg" alt="Images guide">
             </div>
-            <div class="featured-artist">
-                <span class="image-container">
-                    <img src="images/femke.jpeg" alt="Artist image Femke">
-                </span>
-                <span class="name">FEMKE - STEM</span>
+            <div class="col-4 text-center">
+                <img class="image-fit-x" src="images/colourpalette.jpg" alt="Colout palette">
+            </div>
+            <div class="col-4 text-center">
+                <img class="image-fit-x" src="images/typography.jpg" alt="Typography">
             </div>
         </div>
     </div>
@@ -144,10 +112,6 @@
     </footer>
 
     <script src="js/bootstrap.bundle.js"></script>
-    <script src="js/glide.min.js"></script>
-    <script>
-        new Glide('.glide').mount()
-      </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VFLVGB3MP4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];

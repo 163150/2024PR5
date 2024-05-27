@@ -139,7 +139,7 @@
     if (isElement$1(object)) {
       return object.jquery ? object[0] : object;
     }
-    if (typeof object === 'string' && object.length > 0) {
+    if (typeof object === 'string' && object.length> 0) {
       return document.querySelector(parseSelector(object));
     }
     return null;
@@ -1043,7 +1043,7 @@
       execute(this._config.endCallback);
     }
     _move(event) {
-      this._deltaX = event.touches && event.touches.length > 1 ? 0 : event.touches[0].clientX - this._deltaX;
+      this._deltaX = event.touches && event.touches.length> 1 ? 0 : event.touches[0].clientX - this._deltaX;
     }
     _handleSwipe() {
       const absDeltaX = Math.abs(this._deltaX);
@@ -1055,7 +1055,7 @@
       if (!direction) {
         return;
       }
-      execute(direction > 0 ? this._config.rightCallback : this._config.leftCallback);
+      execute(direction> 0 ? this._config.rightCallback : this._config.leftCallback);
     }
     _initEvents() {
       if (this._supportPointerEvents) {
@@ -1074,7 +1074,7 @@
 
     // Static
     static isSupported() {
-      return 'ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0;
+      return 'ontouchstart' in document.documentElement || navigator.maxTouchPoints> 0;
     }
   }
 
@@ -1214,7 +1214,7 @@
     }
     to(index) {
       const items = this._getItems();
-      if (index > items.length - 1 || index < 0) {
+      if (index> items.length - 1 || index < 0) {
         return;
       }
       if (this._isSliding) {
@@ -1225,7 +1225,7 @@
       if (activeIndex === index) {
         return;
       }
-      const order = index > activeIndex ? ORDER_NEXT : ORDER_PREV;
+      const order = index> activeIndex ? ORDER_NEXT : ORDER_PREV;
       this._slide(order, items[index]);
     }
     dispose() {
@@ -1875,8 +1875,8 @@
     var scaleY = 1;
 
     if (includeScale && isHTMLElement(element)) {
-      scaleX = element.offsetWidth > 0 ? round(clientRect.width) / element.offsetWidth || 1 : 1;
-      scaleY = element.offsetHeight > 0 ? round(clientRect.height) / element.offsetHeight || 1 : 1;
+      scaleX = element.offsetWidth> 0 ? round(clientRect.width) / element.offsetWidth || 1 : 1;
+      scaleY = element.offsetHeight> 0 ? round(clientRect.height) / element.offsetHeight || 1 : 1;
     }
 
     var _ref = isElement(element) ? getWindow(element) : window,
@@ -1952,7 +1952,7 @@
   }
 
   function isTableElement(element) {
-    return ['table', 'td', 'th'].indexOf(getNodeName(element)) >= 0;
+    return ['table', 'td', 'th'].indexOf(getNodeName(element))>= 0;
   }
 
   function getDocumentElement(element) {
@@ -2041,7 +2041,7 @@
   }
 
   function getMainAxisFromPlacement(placement) {
-    return ['top', 'bottom'].indexOf(placement) >= 0 ? 'x' : 'y';
+    return ['top', 'bottom'].indexOf(placement)>= 0 ? 'x' : 'y';
   }
 
   function within(min$1, value, max$1) {
@@ -2049,7 +2049,7 @@
   }
   function withinMaxClamp(min, value, max) {
     var v = within(min, value, max);
-    return v > max ? max : v;
+    return v> max ? max : v;
   }
 
   function getFreshSideObject() {
@@ -2089,7 +2089,7 @@
     var popperOffsets = state.modifiersData.popperOffsets;
     var basePlacement = getBasePlacement(state.placement);
     var axis = getMainAxisFromPlacement(basePlacement);
-    var isVertical = [left, right].indexOf(basePlacement) >= 0;
+    var isVertical = [left, right].indexOf(basePlacement)>= 0;
     var len = isVertical ? 'height' : 'width';
 
     if (!arrowElement || !popperOffsets) {
@@ -2473,7 +2473,7 @@
   }
 
   function getScrollParent(node) {
-    if (['html', 'body', '#document'].indexOf(getNodeName(node)) >= 0) {
+    if (['html', 'body', '#document'].indexOf(getNodeName(node))>= 0) {
       // $FlowFixMe[incompatible-return]: assume body is always available
       return node.ownerDocument.body;
     }
@@ -2539,7 +2539,7 @@
 
   function getClippingParents(element) {
     var clippingParents = listScrollParents(getParentNode(element));
-    var canEscapeClipping = ['absolute', 'fixed'].indexOf(getComputedStyle$1(element).position) >= 0;
+    var canEscapeClipping = ['absolute', 'fixed'].indexOf(getComputedStyle$1(element).position)>= 0;
     var clipperElement = canEscapeClipping && isHTMLElement(element) ? getOffsetParent(element) : element;
 
     if (!isElement(clipperElement)) {
@@ -2685,8 +2685,8 @@
     if (elementContext === popper && offsetData) {
       var offset = offsetData[placement];
       Object.keys(overflowOffsets).forEach(function (key) {
-        var multiply = [right, bottom].indexOf(key) >= 0 ? 1 : -1;
-        var axis = [top, bottom].indexOf(key) >= 0 ? 'y' : 'x';
+        var multiply = [right, bottom].indexOf(key)>= 0 ? 1 : -1;
+        var axis = [top, bottom].indexOf(key)>= 0 ? 'y' : 'x';
         overflowOffsets[key] += offset[axis] * multiply;
       });
     }
@@ -2712,7 +2712,7 @@
       return getVariation(placement) === variation;
     }) : basePlacements;
     var allowedPlacements = placements$1.filter(function (placement) {
-      return allowedAutoPlacements.indexOf(placement) >= 0;
+      return allowedAutoPlacements.indexOf(placement)>= 0;
     });
 
     if (allowedPlacements.length === 0) {
@@ -2790,7 +2790,7 @@
       var _basePlacement = getBasePlacement(placement);
 
       var isStartVariation = getVariation(placement) === start;
-      var isVertical = [top, bottom].indexOf(_basePlacement) >= 0;
+      var isVertical = [top, bottom].indexOf(_basePlacement)>= 0;
       var len = isVertical ? 'width' : 'height';
       var overflow = detectOverflow(state, {
         placement: placement,
@@ -2801,7 +2801,7 @@
       });
       var mainVariationSide = isVertical ? isStartVariation ? right : left : isStartVariation ? bottom : top;
 
-      if (referenceRect[len] > popperRect[len]) {
+      if (referenceRect[len]> popperRect[len]) {
         mainVariationSide = getOppositePlacement(mainVariationSide);
       }
 
@@ -2848,7 +2848,7 @@
         }
       };
 
-      for (var _i = numberOfChecks; _i > 0; _i--) {
+      for (var _i = numberOfChecks; _i> 0; _i--) {
         var _ret = _loop(_i);
 
         if (_ret === "break") break;
@@ -2892,7 +2892,7 @@
 
   function isAnySideFullyClipped(overflow) {
     return [top, right, bottom, left].some(function (side) {
-      return overflow[side] >= 0;
+      return overflow[side]>= 0;
     });
   }
 
@@ -2935,7 +2935,7 @@
 
   function distanceAndSkiddingToXY(placement, rects, offset) {
     var basePlacement = getBasePlacement(placement);
-    var invertDistance = [left, top].indexOf(basePlacement) >= 0 ? -1 : 1;
+    var invertDistance = [left, top].indexOf(basePlacement)>= 0 ? -1 : 1;
 
     var _ref = typeof offset === 'function' ? offset(Object.assign({}, rects, {
       placement: placement
@@ -2945,7 +2945,7 @@
 
     skidding = skidding || 0;
     distance = (distance || 0) * invertDistance;
-    return [left, right].indexOf(basePlacement) >= 0 ? {
+    return [left, right].indexOf(basePlacement)>= 0 ? {
       x: distance,
       y: skidding
     } : {
@@ -4164,7 +4164,7 @@
       this._resetElementAttributes(SELECTOR_STICKY_CONTENT, PROPERTY_MARGIN);
     }
     isOverflowing() {
-      return this.getWidth() > 0;
+      return this.getWidth()> 0;
     }
 
     // Private
@@ -4175,7 +4175,7 @@
     _setElementAttributes(selector, styleProperty, callback) {
       const scrollbarWidth = this.getWidth();
       const manipulationCallBack = element => {
-        if (element !== this._element && window.innerWidth > element.clientWidth + scrollbarWidth) {
+        if (element !== this._element && window.innerWidth> element.clientWidth + scrollbarWidth) {
           return;
         }
         this._saveInitialAttribute(element, styleProperty);
@@ -4426,7 +4426,7 @@
       if (hideEvent.defaultPrevented) {
         return;
       }
-      const isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight;
+      const isModalOverflowing = this._element.scrollHeight> document.documentElement.clientHeight;
       const initialOverflowY = this._element.style.overflowY;
       // return if the following background transition hasn't yet completed
       if (initialOverflowY === 'hidden' || this._element.classList.contains(CLASS_NAME_STATIC)) {
@@ -4450,9 +4450,9 @@
      */
 
     _adjustDialog() {
-      const isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight;
+      const isModalOverflowing = this._element.scrollHeight> document.documentElement.clientHeight;
       const scrollbarWidth = this._scrollBar.getWidth();
-      const isBodyOverflowing = scrollbarWidth > 0;
+      const isBodyOverflowing = scrollbarWidth> 0;
       if (isBodyOverflowing && !isModalOverflowing) {
         const property = isRTL() ? 'paddingLeft' : 'paddingRight';
         this._element.style[property] = `${scrollbarWidth}px`;
@@ -4906,7 +4906,7 @@
       return Object.values(this._config.content).map(config => this._resolvePossibleFunction(config)).filter(Boolean);
     }
     hasContent() {
-      return this.getContent().length > 0;
+      return this.getContent().length> 0;
     }
     changeContent(content) {
       this._checkContent(content);
@@ -5599,7 +5599,7 @@
   const SELECTOR_NAV_LINKS = '.nav-link';
   const SELECTOR_NAV_ITEMS = '.nav-item';
   const SELECTOR_LIST_ITEMS = '.list-group-item';
-  const SELECTOR_LINK_ITEMS = `${SELECTOR_NAV_LINKS}, ${SELECTOR_NAV_ITEMS} > ${SELECTOR_NAV_LINKS}, ${SELECTOR_LIST_ITEMS}`;
+  const SELECTOR_LINK_ITEMS = `${SELECTOR_NAV_LINKS}, ${SELECTOR_NAV_ITEMS}> ${SELECTOR_NAV_LINKS}, ${SELECTOR_LIST_ITEMS}`;
   const SELECTOR_DROPDOWN = '.dropdown';
   const SELECTOR_DROPDOWN_TOGGLE$1 = '.dropdown-toggle';
   const Default$1 = {
@@ -5724,7 +5724,7 @@
         this._process(targetElement(entry));
       };
       const parentScrollTop = (this._rootElement || document.documentElement).scrollTop;
-      const userScrollsDown = parentScrollTop >= this._previousScrollData.parentScrollTop;
+      const userScrollsDown = parentScrollTop>= this._previousScrollData.parentScrollTop;
       this._previousScrollData.parentScrollTop = parentScrollTop;
       for (const entry of entries) {
         if (!entry.isIntersecting) {
@@ -5732,7 +5732,7 @@
           this._clearActiveClass(targetElement(entry));
           continue;
         }
-        const entryIsLowerThanPrevious = entry.target.offsetTop >= this._previousScrollData.visibleEntryTop;
+        const entryIsLowerThanPrevious = entry.target.offsetTop>= this._previousScrollData.visibleEntryTop;
         // if we are scrolling down, pick the bigger offsetTop
         if (userScrollsDown && entryIsLowerThanPrevious) {
           activate(entry);
